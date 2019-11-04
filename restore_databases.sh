@@ -2,7 +2,7 @@
 
 #install postgres
 sudo apt-get update
-sudo apt-get install -y postgresql postgresql-contrib
+sudo apt-get install -y postgresql postgresql-contrib postgresql-client-common
 
 #download databases
 mkdir databases
