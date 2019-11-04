@@ -137,7 +137,7 @@ WantedBy=multi-user.target" > ~/deploy/configs/celery.service
 
 
 #benga_setting.py
-export SECRET_KEY=$(python -c 'import random, string; result = "".join([random.SystemRandom().choice("{}{}{}".format(string.ascii_letters, string.digits, string.punctuation)) for i in range(50)]); print(result)')
+export SECRET_KEY=$(python -c 'import random, string; result = "".join([random.SystemRandom().choice("{}{}{}".format(string.ascii_letters, string.digits, string.punctuation)) for i in range(50)]); result.replace("'",random.choice("{},{}".format(string.ascii_letters, string.digits))) ;print(result)')
 export DQ='"""'
 export AP="'"
 
