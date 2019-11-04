@@ -35,7 +35,7 @@ python manage.py migrate
 
 sudo mkdir -p /var/www/benga/cgMLST/
 sudo chown ubuntu -R /var/www/benga/cgMLST/
-python manage.py collectstatic
+python manage.py collectstatic --noinput
 
 sudo chown -R www-data /var/www/benga
 sudo chmod -R 755 /var/www/benga
