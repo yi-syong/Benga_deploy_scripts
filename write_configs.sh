@@ -232,7 +232,7 @@ DATABASES = {
     ${AP}default${AP}: {
         ${AP}ENGINE${AP}: ${AP}django.db.backends.postgresql_psycopg2${AP},
         ${AP}NAME${AP}: ${AP}benga${AP},
-        ${AP}USER${AP}: ${AP}centrallab${AP},
+        ${AP}USER${AP}: ${AP}ubuntu${AP},
         ${AP}PASSWORD${AP}: ${AP}5qM5dU5jDf3gVHeP${AP},
         ${AP}HOST${AP}: ${AP}127.0.0.1${AP},
         ${AP}PORT${AP}: 5432
