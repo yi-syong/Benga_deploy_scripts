@@ -22,6 +22,7 @@ export NVM_DIR="$HOME.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 #. venv/bin/activate
 nvm install v10.13.0
+sudo apt install -y npm
 npm install
 export NODE_OPTIONS=--max_old_space_size=4096
 npm run build
@@ -33,7 +34,7 @@ python manage.py makemigrations
 python manage.py migrate
 
 sudo mkdir -p /var/www/benga/cgMLST/
-sudo chown ubuntu /var/www/benga/cgMLST/
+sudo chown ubuntu -R /var/www/benga/cgMLST/
 python manage.py collectstatic
 
 sudo chown -R www-data /var/www/benga
