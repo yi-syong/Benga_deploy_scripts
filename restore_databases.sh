@@ -15,7 +15,7 @@ mkdir Vibrio_cholerae
 cd Vibrio_cholerae
 wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1zfYvtoXnZO60c1L36qnt0PKcv4fSzGNs' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1zfYvtoXnZO60c1L36qnt0PKcv4fSzGNs" -O track.bson  && rm -rf /tmp/cookies.txt
 wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1zepTpVIs3OLfgOP5pxZQST4Vi0l8C6fX' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1zepTpVIs3OLfgOP5pxZQST4Vi0l8C6fX" -O track.metadata.json  && rm -rf /tmp/cookies.txt
-cd /home/ubuntu/deploy/
+cd ~/deploy/
 
 #create a role named 'ubuntu'
 sudo -u postgres psql -c "CREATE ROLE ubuntu WITH CREATEDB LOGIN PASSWORD '5qM5dU5jDf3gVHeP';"

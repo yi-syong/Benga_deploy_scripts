@@ -2,9 +2,8 @@
 
 #backend
 
-sudo apt update
 sudo apt install -y git python3-pip virtualenv
-cd ..
+cd ~
 git clone https://github.com/openCDCTW/Benga.git
 cd Benga/
 git checkout develop
@@ -12,6 +11,8 @@ virtualenv venv -p python3
 . venv/bin/activate
 pip install -r requirements.txt --upgrade
 createdb benga
+rm benga/settings.py
+cp ~/deploy/configs/settings.py benga/settings.py
 
 #build frontend
 
@@ -25,13 +26,6 @@ npm install
 export NODE_OPTIONS=--max_old_space_size=4096
 npm run build
 npm run build-nonrelease
-
-#modify environment variables
-
-. scripts/run_envs.sh ../deploy/envs/api-server.env
-. scripts/run_envs.sh ../deploy/envs/nosql.env
-. scripts/run_envs.sh ../deploy/envs/sql.env
-. scripts/generate_secret_key.sh
 
 #createdb benga
 python manage.py check
@@ -54,7 +48,5 @@ sudo touch /run/uwsgi/benga.sock
 sudo chown -R www-data /run/uwsgi/
 
 sudo mkdir -p /etc/uwsgi/vassals/
-sudo cp ../deploy/configs/uwsgi.ini /etc/uwsgi/vassals/uwsgi.ini
-sudo cp ../deploy/configs/benga.service /etc/systemd/system/benga.service
-
-sudo systemctl start benga.service
+sudo cp ~/deploy/configs/uwsgi.ini /etc/uwsgi/vassals/uwsgi.ini
+sudo cp ~/deploy/configs/benga.service /etc/systemd/system/benga.service
