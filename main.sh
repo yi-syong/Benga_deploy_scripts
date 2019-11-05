@@ -1,4 +1,3 @@
-
 mv BENGA_automatically_deploy_script/ deploy/
 cd deploy/
 
@@ -13,3 +12,9 @@ cd deploy/
 sudo systemctl start benga.service
 sudo systemctl start celery.service
 sudo systemctl restart nginx.service
+
+clear
+deactivate
+cd ~
+echo "Done."
+rm -r --force ~/deploy
