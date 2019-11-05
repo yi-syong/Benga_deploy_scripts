@@ -2,7 +2,7 @@
 
 #backend
 
-sudo apt install -y git python3-pip virtualenv
+sudo apt install -y python3-pip virtualenv
 cd ~
 git clone https://github.com/openCDCTW/Benga.git
 cd Benga/
