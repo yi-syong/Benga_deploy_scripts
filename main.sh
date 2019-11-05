@@ -7,8 +7,8 @@ cd deploy/
 . install-blast.sh
 . build-rabbitmq.sh
 . build-benga.sh
-. build-nginx.sh
-. build-celery.sh
+. ~/deploy/build-nginx.sh
+. ~/deploy/build-celery.sh
 
 sudo systemctl start benga.service
 sudo systemctl start celery.service
