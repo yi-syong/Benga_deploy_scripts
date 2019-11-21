@@ -1,15 +1,14 @@
-# BENGA automatically deploy script
+# Scripts of automatically deploy Benga web services
 
-Automated deploy benga website on VM of TWCC or AWS.
+Automatically deploy benga web services on a VM.
 
-### Environment
+### OS
 - Ubuntu 18.04
-- username: ubuntu
 
 ### Usage
 ```shell=
 sudo apt-get install git
 cd ~
-git clone https://github.com/yi-syong/BENGA_automatically_deploy_script.git
-. BENGA_automatically_deploy_script/main.sh
+git clone https://github.com/yi-syong/Benga_deploy_scripts.git
+. Benga_deploy_scripts/main.sh
 ```

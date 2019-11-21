@@ -49,7 +49,7 @@ Description=Benga server by uWSGI
 After=syslog.target
 
 [Service]
-ExecStart=/home/ubuntu/Benga/venv/bin/uwsgi --ini /etc/uwsgi/vassals/uwsgi.ini
+ExecStart=/home/${USER}/Benga/venv/bin/uwsgi --ini /etc/uwsgi/vassals/uwsgi.ini
 Restart=always
 KillSignal=SIGQUIT
 Type=notify
@@ -72,7 +72,7 @@ thunder-lock = true
 virtualenv = venv
 #listen = 500
 
-chdir = /home/ubuntu/Benga/
+chdir = /home/${USER}/Benga/
 logto = /var/log/uwsgi/benga.log
 
 socket = /run/uwsgi/benga.sock
@@ -91,9 +91,9 @@ mule-reload-mercy = 240" > ~/deploy/configs/uwsgi.ini
 
 #celery config
 echo "CELERY_APP='benga'
-CELERY_BIN='/home/ubuntu/Benga/venv/bin/celery'
+CELERY_BIN='/home/${USER}/Benga/venv/bin/celery'
 CELERYD_NODES=2
-CELERYD_CHDIR='/home/ubuntu/Benga'
+CELERYD_CHDIR='/home/${USER}/Benga'
 CELERYD_OPTS='-c 8'
 CELERYD_USER='www-data'
 CELERYD_GROUP='www-data'
@@ -119,7 +119,7 @@ Type=forking
 User=www-data
 Group=www-data
 EnvironmentFile=/etc/default/celeryd
-WorkingDirectory=/home/ubuntu/Benga
+WorkingDirectory=/home/${USER}/Benga
 
 ExecStart=/bin/sh -c '${W_CELERY_BIN} multi start ${W_CELERYD_NODES} ${BS}
   -A ${W_CELERY_APP} --pidfile=${W_CELERYD_PID_FILE} ${BS}

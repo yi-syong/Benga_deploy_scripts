@@ -33,6 +33,3 @@ psql Listeria_monocytogenes < databases/Listeria_monocytogenes.sql
 #install mongodb & restore database
 sudo apt-get install -y mongodb
 mongorestore -d Vibrio_cholerae databases/Vibrio_cholerae/
-
-
-

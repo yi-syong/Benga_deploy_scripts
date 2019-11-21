@@ -1,4 +1,4 @@
-mv BENGA_automatically_deploy_script/ deploy/
+mv Benga_deploy_scripts/ deploy/
 cd deploy/
 
 . restore_databases.sh
