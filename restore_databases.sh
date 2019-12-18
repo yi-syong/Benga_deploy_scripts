@@ -25,7 +25,7 @@ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download
 cd ~/deploy/
 
 #create a role named 'ubuntu'
-sudo -u postgres psql -c "CREATE ROLE ubuntu WITH CREATEDB LOGIN PASSWORD '5qM5dU5jDf3gVHeP';"
+sudo -u postgres psql -c "CREATE ROLE ${USER} WITH CREATEDB LOGIN PASSWORD '5qM5dU5jDf3gVHeP';"
 
 #restore databases
 createdb Campylobacter_coli/jejuni
