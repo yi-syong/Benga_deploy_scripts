@@ -20,8 +20,19 @@ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download
 
 mkdir Vibrio_cholerae
 cd Vibrio_cholerae
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1zfYvtoXnZO60c1L36qnt0PKcv4fSzGNs' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1zfYvtoXnZO60c1L36qnt0PKcv4fSzGNs" -O track.bson  && rm -rf /tmp/cookies.txt
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1zepTpVIs3OLfgOP5pxZQST4Vi0l8C6fX' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1zepTpVIs3OLfgOP5pxZQST4Vi0l8C6fX" -O track.metadata.json  && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1YYYpBm-d8nLe8OODvcvTekwhHudFtfwr' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1YYYpBm-d8nLe8OODvcvTekwhHudFtfwr" -O track_data.bson  && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1HoCP2ORZS-HqWV9NkrTgTV82-bOuQ-5H' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1HoCP2ORZS-HqWV9NkrTgTV82-bOuQ-5H" -O track_data.metadata.json  && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1xb_WpCY3fZbdtYDeR0LSbWg-1s_s_ZeG' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1xb_WpCY3fZbdtYDeR0LSbWg-1s_s_ZeG" -O metadata_cols.metadata.json  && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=17o4z-p8af9CuUCvpCZux6gZVpddFI7Qv' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=17o4z-p8af9CuUCvpCZux6gZVpddFI7Qv" -O metadata_cols.bson  && rm -rf /tmp/cookies.txt
+cd ..
+
+mkdir Neisseria_meningitidis
+cd Neisseria_meningitidis
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1u44l4UD8BofiFesUh5paNMs_T2e59lDu' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1u44l4UD8BofiFesUh5paNMs_T2e59lDu" -O metadata_cols.bson  && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=13FCY-O1yjtV1PvIRHcU8fmENFF_UiU_O' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=13FCY-O1yjtV1PvIRHcU8fmENFF_UiU_O" -O metadata_cols.metadata.json  && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1eTHoNA25cYbaUJPwr187H0jcrWTJrCV1' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1eTHoNA25cYbaUJPwr187H0jcrWTJrCV1" -O track_data.bson  && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=15QEroogykfr7ZW76xfojQEyzd-ancxau' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=15QEroogykfr7ZW76xfojQEyzd-ancxau" -O track_data.metadata.json  && rm -rf /tmp/cookies.txt
+
 cd ~/deploy/
 
 #create a role named 'ubuntu'
@@ -52,3 +63,4 @@ psql Vibrio_parahaemolyticus < databases/Vibrio_parahaemolyticus.sql
 #install mongodb & restore database
 sudo apt-get install -y mongodb
 mongorestore -d Vibrio_cholerae databases/Vibrio_cholerae/
+mongorestore -d Neisseria_meningitidis databases/Neisseria_meningitidis/
